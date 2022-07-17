@@ -1,19 +1,23 @@
-import Navbar from './components/Navbar.js'
-import Home from './pages/Home'
+import Topbar from './components/Topbar'
+import AboutMe from './pages/AboutMe'
 import Resume from './pages/Resume'
 import Contact from './pages/Contact'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <><Navbar />
+    <><Topbar />
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<AboutMe />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-      </Router></>
+      </Router>
+      <AboutMe />
+      <Resume />
+      <Contact />
+    </>
   );
 }
 
